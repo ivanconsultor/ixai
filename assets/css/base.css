@@ -1,0 +1,171 @@
+/**
+ * AGÊNCIA IX AI — RESET CSS, TIPOGRAFIA E ESTILOS BASE
+ * Versão: 1.0.0
+ * Padrão de Engenharia: Acessibilidade W3C & Core Web Vitals
+ */
+
+/* As fontes do Google são carregadas por <link> no <head> do index.html.
+   @import aqui atrasaria o LCP: o navegador só descobriria a fonte depois de baixar este CSS. */
+
+/* ==========================================================================
+   RESET CSS MODERNO
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  tab-size: 4;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  font-weight: var(--weight-regular);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  transition: background-color var(--transition-slow), color var(--transition-slow);
+}
+
+/* ==========================================================================
+   SELEÇÃO DE TEXTO & SCROLLBAR REFINADA
+   ========================================================================== */
+::selection {
+  background-color: var(--accent-cyan);
+  color: #0E0F11;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-subtle);
+  border-radius: var(--radius-pill);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-focus);
+}
+
+/* ==========================================================================
+   TIPOGRAFIA SEMÂNTICA
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  font-weight: var(--weight-semibold);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+h1 {
+  font-size: clamp(2.25rem, 5vw, 4.25rem);
+}
+
+h2 {
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+}
+
+p {
+  color: var(--text-secondary);
+  font-size: var(--text-base);
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+img, picture, svg, video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+}
+
+/* ==========================================================================
+   FOCO VISÍVEL PARA TECLADO (WCAG 2.4.7)
+   ========================================================================== */
+:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* Mouse e toque não mostram o anel; teclado sempre mostra */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  user-select: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* ==========================================================================
+   UTILITÁRIOS DE ACESSIBILIDADE & SEO
+   ========================================================================== */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Elementos em fonte mono técnica */
+.font-mono {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Textos destacados em Ciano */
+.text-cyan {
+  color: var(--accent-cyan);
+}
+
+.text-emerald {
+  color: var(--accent-emerald);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}

@@ -1,0 +1,7 @@
+# Lixo do Windows e do macOS
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Pacote gerado para subir na Hostinger (se montado aqui dentro)
+site-ixai.zip

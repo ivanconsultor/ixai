@@ -1,0 +1,789 @@
+/**
+ * AGÊNCIA IX AI — ESTRUTURA DE LAYOUT, GRIDS E RESPONSIVIDADE
+ * Versão: 1.0.0
+ * Padrão de Engenharia: Mobile-First / Zero Layout Shift
+ */
+
+/* ==========================================================================
+   1. CONTAINER E SEÇÕES GLOBAIS
+   ========================================================================== */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--section-padding-x);
+  padding-right: var(--section-padding-x);
+  position: relative;
+  z-index: 1;
+}
+
+.section {
+  padding-top: var(--section-padding-y);
+  padding-bottom: var(--section-padding-y);
+  position: relative;
+  overflow: hidden;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.section-header .badge-capsule {
+  margin-bottom: 1.25rem;
+}
+
+.section-header h2 {
+  margin-bottom: 1rem;
+}
+
+.section-header p {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   2. HEADER FIXO COM EFEITO GLASSMORPHYSIM
+   ========================================================================== */
+.header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: var(--bg-glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border-subtle);
+  transition: all var(--transition-normal);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.brand-logo-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand-monogram {
+  width: 32px;
+  height: 32px;
+}
+
+.brand-text {
+  white-space: nowrap;
+  font-family: var(--font-sans);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-semibold);
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.brand-text span {
+  color: var(--accent-cyan);
+}
+
+.nav-links {
+  display: none; /* Em mobile usaremos menu gaveta / simplificado */
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (min-width: 860px) {
+  .nav-links {
+    display: flex;
+  }
+}
+
+.nav-link {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  font-weight: var(--weight-medium);
+  transition: color var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--text-primary);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   MENU GAVETA (TELAS < 860px)
+   -------------------------------------------------------------------------- */
+/* Sem JS o botão não aparece, para não existir controle morto na tela */
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface-1);
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.js .nav-toggle {
+  display: flex;
+}
+
+.nav-toggle:hover {
+  color: var(--text-primary);
+  border-color: var(--border-focus);
+}
+
+.nav-toggle .icon-close,
+.header-fixed[data-nav-open="true"] .nav-toggle .icon-menu {
+  display: none;
+}
+
+.header-fixed[data-nav-open="true"] .nav-toggle .icon-close {
+  display: block;
+}
+
+.mobile-nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem var(--section-padding-x) 1.5rem;
+  /* Fundo opaco: backdrop-filter aninhado dentro do header não borra a página,
+     e o conteúdo atravessava o menu */
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-card);
+  /* visibility remove os links da ordem de tabulação enquanto o menu está fechado */
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity var(--transition-normal), transform var(--transition-normal), visibility var(--transition-normal);
+}
+
+.header-fixed[data-nav-open="true"] .mobile-nav {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobile-nav-link {
+  padding: 0.9rem 0;
+  font-size: var(--text-base);
+  font-weight: var(--weight-medium);
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.mobile-nav-link:hover {
+  color: var(--accent-cyan);
+}
+
+.mobile-nav .btn-pill {
+  margin-top: 1.25rem;
+  width: 100%;
+}
+
+/* Abaixo de 860px o CTA vive dentro da gaveta, para o header não ficar apertado */
+@media (max-width: 859px) {
+  .js .header-actions .btn-pill {
+    display: none;
+  }
+}
+
+@media (min-width: 860px) {
+  .js .nav-toggle,
+  .mobile-nav {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   3. HERO SECTION (ATMOSFERA TESS.IM)
+   ========================================================================== */
+.hero-section {
+  min-height: 90vh;
+  padding-top: calc(72px + 4rem);
+  padding-bottom: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  background: var(--aurora-gradient);
+}
+
+.hero-content {
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-capsule-wrap {
+  margin-bottom: 2rem;
+}
+
+.hero-headline {
+  font-size: clamp(2.5rem, 5.8vw, 4.6rem);
+  font-weight: var(--weight-bold);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+}
+
+.hero-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+/* Celular e tablet: os agentes saem da órbita e viram uma faixa abaixo dos
+   botões da hero (2 por linha no celular, 4 lado a lado no tablet), com o
+   pontilhado descendo de cada um até o início dos serviços */
+@media (max-width: 1199px) {
+  .hero-section {
+    flex-direction: column;
+  }
+
+  .hero-agents-constellation {
+    order: 2;
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem 1rem;
+    width: 100%;
+    max-width: 420px;
+    margin: 3rem auto 0;
+    padding: 0 var(--section-padding-x);
+  }
+
+  .hero-agents-constellation .agent-node {
+    position: static;
+  }
+
+  /* A camada de tracados continua ativa: aqui as linhas descem dos agentes
+     ate o inicio da secao de servicos (destino trocado no main.js) */
+}
+
+@media (min-width: 640px) and (max-width: 1199px) {
+  .hero-agents-constellation {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    max-width: 760px;
+  }
+}
+
+/* A constelacao so aparece quando ha largura para ela conviver com o texto.
+   Abaixo disso os agentes invadiam a headline e o paragrafo. */
+@media (min-width: 1200px) {
+  .hero-agents-constellation {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .agent-node {
+    pointer-events: auto;
+  }
+
+  .node-sdr {
+    top: 13%;
+    left: 1.5%;
+  }
+
+  .node-followup {
+    top: 16%;
+    right: 1.5%;
+  }
+
+  .node-schedule {
+    bottom: 10%;
+    left: 3%;
+  }
+
+  /* Um pouco mais alto que os outros: abaixo dele passa o botao flutuante
+     do WhatsApp, que sobe quando o aviso de cookies esta aberto */
+  .node-qualifier {
+    bottom: 18%;
+    right: 3%;
+  }
+
+  /* Corredor central mais estreito: abre espaco lateral para os agentes */
+  .hero-content {
+    max-width: 780px;
+  }
+
+  /* Headline curta permite corpo maior mesmo com a coluna estreita */
+  .hero-headline {
+    font-size: clamp(2.75rem, 4.6vw, 4rem);
+  }
+}
+
+@media (min-width: 1500px) {
+  .hero-content {
+    max-width: 900px;
+  }
+
+  .node-sdr,
+  .node-schedule {
+    left: 4%;
+  }
+
+  .node-followup,
+  .node-qualifier {
+    right: 4%;
+  }
+}
+
+/* ==========================================================================
+   4. SEÇÃO DE SERVIÇOS (LISTA DE ABAS + PAINEL)
+   ========================================================================== */
+.services-layout {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Sem JS as abas somem e todos os painéis aparecem empilhados */
+.services-tabs {
+  display: none;
+}
+
+.js .services-tabs {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-bottom: 2px;
+}
+
+.js .services-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.service-tab {
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-pill);
+  padding: 0.625rem 1rem;
+  cursor: pointer;
+  transition: color var(--transition-normal), border-color var(--transition-normal), background var(--transition-normal);
+}
+
+.service-tab:hover {
+  color: var(--text-primary);
+}
+
+.service-tab[aria-selected="true"] {
+  color: var(--accent-cyan);
+  border-color: var(--border-glow);
+  background: var(--accent-cyan-subtle);
+}
+
+.service-tab:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 2px;
+}
+
+.services-panels {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.service-panel {
+  position: relative;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface-1);
+  border-radius: var(--radius-xl);
+  padding: 2rem 1.5rem;
+}
+
+.service-panel[hidden] {
+  display: none;
+}
+
+/* Com JS os painéis dividem a mesma célula: a caixa fica com a altura do
+   maior e o botão abaixo não pula ao trocar de aba */
+.js .service-panel {
+  grid-area: 1 / 1;
+}
+
+.js .service-panel[hidden] {
+  display: block;
+  visibility: hidden;
+}
+
+.service-panel:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 3px;
+}
+
+.service-panel-count {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+.service-panel-tagline {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-cyan);
+  margin-bottom: 1rem;
+  padding-right: 4rem;
+}
+
+.service-panel-title {
+  font-size: var(--text-3xl);
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.service-panel-desc {
+  max-width: 620px;
+  margin-bottom: 2rem;
+}
+
+.service-points {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.875rem;
+}
+
+.service-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.service-point svg {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  color: var(--accent-cyan);
+  margin-top: 2px;
+}
+
+.services-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+@media (min-width: 900px) {
+  .js .services-layout {
+    grid-template-columns: 280px 1fr;
+    gap: 2.5rem;
+    align-items: start;
+  }
+
+  /* No desktop as abas viram uma lista vertical com trilho à esquerda */
+  .js .services-tabs {
+    flex-direction: column;
+    gap: 0;
+    overflow: visible;
+    border-left: 1px solid var(--border-subtle);
+  }
+
+  .js .service-tab {
+    text-align: left;
+    border: none;
+    border-left: 2px solid transparent;
+    border-radius: 0;
+    margin-left: -1px;
+    padding: 1.125rem 1.25rem;
+    font-size: var(--text-sm);
+  }
+
+  .js .service-tab[aria-selected="true"] {
+    background: transparent;
+    border-left-color: var(--accent-cyan);
+  }
+
+  .service-panel {
+    padding: 3rem;
+  }
+
+  .service-panel-count {
+    top: 2rem;
+    right: 2rem;
+  }
+}
+
+/* ==========================================================================
+   5. TIMELINE EVOLUTIVA (BENCHMARK TESS.IM)
+   ========================================================================== */
+.timeline-track-wrap {
+  background: var(--bg-surface-1);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: 3rem 2.5rem;
+  margin-top: 2rem;
+}
+
+.timeline-steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  position: relative;
+}
+
+@media (min-width: 860px) {
+  .timeline-steps {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  .timeline-steps::before {
+    content: '';
+    position: absolute;
+    top: 22px;
+    left: 40px;
+    right: 40px;
+    height: 1px;
+    background: var(--border-subtle);
+    z-index: 0;
+  }
+}
+
+.timeline-step {
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-year-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.timeline-step.active .timeline-year-badge {
+  color: var(--accent-cyan);
+  font-weight: var(--weight-bold);
+}
+
+.timeline-step-title {
+  font-size: var(--text-xl);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-step.active .timeline-step-title {
+  color: var(--accent-cyan);
+}
+
+.timeline-step-desc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   6. GRID DE SETORES DE MERCADO PME (ICPs)
+   ========================================================================== */
+.sectors-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 640px) {
+  .sectors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1040px) {
+  .sectors-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.sector-card {
+  background: var(--bg-surface-1);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.5rem;
+  transition: all var(--transition-normal);
+}
+
+.sector-card:hover {
+  background: var(--bg-surface-2);
+  border-color: var(--border-glow);
+  transform: translateY(-2px);
+}
+
+.sector-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--accent-cyan-subtle);
+  color: var(--accent-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.sector-title {
+  font-size: var(--text-lg);
+  margin-bottom: 0.75rem;
+}
+
+.sector-desc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   7. FOOTER CORPORATIVO COM LINKS ORGÂNICOS
+   ========================================================================== */
+.footer-main {
+  background-color: var(--bg-surface-1);
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 860px) {
+  .footer-grid {
+    grid-template-columns: 2fr repeat(3, 1fr);
+  }
+}
+
+.footer-brand-col p {
+  margin-top: 1rem;
+  max-width: 340px;
+  font-size: var(--text-sm);
+}
+
+.footer-col-title {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  margin-bottom: 1.25rem;
+}
+
+.footer-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.footer-link {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.footer-link:hover {
+  color: var(--accent-cyan);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+@media (min-width: 768px) {
+  .footer-bottom {
+    flex-direction: row;
+  }
+}
+
+.footer-legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.25rem;
+}
+
+.footer-legal-links a {
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+}
+
+.footer-legal-links a:hover {
+  color: var(--accent-cyan);
+}
+
+.footer-social-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.social-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface-2);
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.social-icon-btn:hover {
+  color: var(--accent-cyan);
+  border-color: var(--accent-cyan);
+  transform: translateY(-2px);
+}

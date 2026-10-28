@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agência IX AI — Inteligência Artificial para PMEs</title>
+  <meta name="description" content="Agência de inteligência artificial para PMEs: atendimento no WhatsApp em segundos, qualificação, agendamento e rotinas no automático, 24 horas por dia.">
+  <meta name="keywords" content="agência de IA, agência de inteligência artificial, inteligência artificial para PMEs, atendimento no WhatsApp com IA, agendamento automático, recuperação de orçamentos, automação para empresas, clínicas de estética, consultórios odontológicos, escritórios de advocacia, imobiliárias">
+  <meta name="author" content="Agência IX AI">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ixai.com.br/">
+  <meta name="theme-color" content="#0E0F11">
+
+  <!-- Open Graph / Redes Sociais (Facebook, Instagram, LinkedIn) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ixai.com.br/">
+  <meta property="og:title" content="Agência IX AI — Inteligência Artificial para PMEs">
+  <meta property="og:description" content="Sua empresa atendendo, vendendo e organizando com IA: resposta em segundos no WhatsApp, agenda cheia e nenhum orçamento esquecido.">
+  <meta property="og:image" content="https://ixai.com.br/assets/images/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Agência IX AI — inteligência artificial para atender, vender e organizar">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Agência IX AI">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Agência IX AI — Inteligência Artificial para PMEs">
+  <meta name="twitter:description" content="Inteligência artificial que atende, qualifica e agenda para empresas de serviços de alto padrão.">
+  <meta name="twitter:image" content="https://ixai.com.br/assets/images/og-cover.png">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
+
+  <!-- Pré-conexão de Fontes para Core Web Vitals -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;600&display=swap">
+
+  <!-- Folhas de Estilo Modulares -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+
+  <!-- Schema.org JSON-LD Unificado para Google Search Central (SEO Avançado) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://ixai.com.br/#organization",
+        "name": "Agência IX AI",
+        "url": "https://ixai.com.br/",
+        "logo": "https://ixai.com.br/assets/images/logo.png",
+        "description": "Agência de inteligência artificial para PMEs: atendimento, qualificação, agendamento e rotinas com IA.",
+        "telephone": "+55-21-98370-1900",
+        "sameAs": [
+          "https://www.facebook.com/ixai.agencia",
+          "https://www.instagram.com/ixai.agencia",
+          "https://www.linkedin.com/company/ixai"
+        ]
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://ixai.com.br/#localbusiness",
+        "name": "Agência IX AI — Inteligência Artificial para PMEs",
+        "url": "https://ixai.com.br/",
+        "telephone": "+55-21-98370-1900",
+        "priceRange": "$$",
+        "areaServed": "BR",
+        "openingHours": "Mo-Fr 08:00-19:00"
+      },
+      {
+        "@type": "Service",
+        "name": "Inteligência Artificial para Atendimento e Vendas",
+        "provider": { "@id": "https://ixai.com.br/#organization" },
+        "areaServed": "BR",
+        "description": "Atendimento no WhatsApp 24 horas com IA, qualificação de clientes, agendamento com confirmação e lembrete, recuperação de orçamentos, cadastro automático e rotinas da equipe no piloto automático."
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Como a IA aprende sobre o meu negócio?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A IA é treinada com a base de conhecimento exclusiva da sua empresa (procedimentos, tabela de preços, regras de atendimento e horários) sob rigorosos parâmetros de controle."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Preciso trocar o número do WhatsApp da minha empresa?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não. A conexão é feita no número comercial que você já usa, preservando contatos e histórico. A forma de conexão é definida na implantação, conforme o volume de atendimento do negócio."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Marca que o JS está ativo: sem ele o conteúdo nasce visível (ver components.css) -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- Consent Mode v2: nega por padrão antes de qualquer tag carregar -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    (function () {
+      var decisao = null;
+      try { decisao = JSON.parse(localStorage.getItem('ixai-consentimento') || 'null'); } catch (e) {}
+      var estado = (decisao && decisao.estado === 'aceito') ? 'granted' : 'denied';
+      gtag('consent', 'default', {
+        ad_storage: estado,
+        ad_user_data: estado,
+        ad_personalization: estado,
+        analytics_storage: estado,
+        functionality_storage: 'granted',
+        security_storage: 'granted'
+      });
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER FIXO (GLASSMORPHISM & CENTRO DE CONTROLE)
+       ========================================================================== -->
+  <header class="header-fixed" id="main-header">
+    <div class="container header-inner">
+      <!-- Monograma Minimalista em SVG + Marca Textual semântica -->
+      <a href="#inicio" class="brand-logo-link" aria-label="Página inicial da Agência IX AI">
+        <svg class="brand-monogram" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- Barra Ciano "I" -->
+          <rect x="5" y="9" width="6" height="22" rx="3" fill="#6FC3D3" />
+          <!-- Letra "X": traço 5,4 sobre 17,5 de largura, para ler como X até em 16px -->
+          <path d="M18.7 11.7L33.3 28.3" stroke="#F3F4F6" stroke-width="5.4" stroke-linecap="round" />
+          <path d="M33.3 11.7L18.7 28.3" stroke="#F3F4F6" stroke-width="5.4" stroke-linecap="round" />
+        </svg>
+        <span class="brand-text">IX <span>AI</span></span>
+      </a>
+
+      <!-- Navegação de Âncoras -->
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="#servicos" class="nav-link">Serviços</a>
+        <a href="#evolucao" class="nav-link">Evolução</a>
+        <a href="#setores" class="nav-link">Setores PME</a>
+        <a href="#controle" class="nav-link">Mission Control</a>
+        <a href="#contato" class="nav-link">Contato</a>
+      </nav>
+
+      <!-- Ações: Alternador de Tema & CTA Oficial WhatsApp -->
+      <div class="header-actions">
+        <button type="button" class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Alternar tema claro/escuro">
+          <!-- Ícone Sol / Lua em SVG inline -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <a href="https://wa.me/5521983701900?text=Ol%C3%A1%2C%20gostaria%20de%20conhecer%20as%20solu%C3%A7%C3%B5es%20da%20Ag%C3%AAncia%20IX%20AI." 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="btn-pill btn-pill-primary btn-pill-sm">
+          Falar com Especialista
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+
+        <!-- Botão do menu gaveta (apenas em telas pequenas) -->
+        <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobile-nav">
+          <svg class="icon-menu" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <line x1="3" y1="7" x2="21" y2="7"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="17" x2="21" y2="17"></line>
+          </svg>
+          <svg class="icon-close" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menu gaveta das telas pequenas -->
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Navegação principal em telas pequenas">
+      <a href="#servicos" class="mobile-nav-link">Serviços</a>
+      <a href="#evolucao" class="mobile-nav-link">Evolução</a>
+      <a href="#setores" class="mobile-nav-link">Setores PME</a>
+      <a href="#controle" class="mobile-nav-link">Mission Control</a>
+      <a href="#contato" class="mobile-nav-link">Contato</a>
+      <a href="https://wa.me/5521983701900?text=Ol%C3%A1%2C%20gostaria%20de%20conhecer%20as%20solu%C3%A7%C3%B5es%20da%20Ag%C3%AAncia%20IX%20AI."
+         target="_blank"
+         rel="noopener noreferrer"
+         class="btn-pill btn-pill-cyan">
+        Falar com Especialista
+      </a>
+    </nav>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION COM CONSTELAÇÃO DE AGENTES (PADRÃO TESS.IM)
+       ========================================================================== -->
+  <main>
+    <section class="hero-section aurora-bg" id="inicio">
+      <!-- Constelação de Agentes Autônomos Orbitando (Visualização Desktop) -->
+      <div class="hero-agents-constellation" aria-hidden="true">
+
+        <!-- Camada de conexao: os tracados sao desenhados por JS a partir da posicao real
+             de cada agente, entao acompanham qualquer largura de tela e a flutuacao -->
+        <svg class="hero-conectores" id="hero-conectores" preserveAspectRatio="none" aria-hidden="true"></svg>
+
+        
+        <!-- Agente 1: SDR de Vendas -->
+        <div class="agent-node node-sdr">
+          <div class="agent-avatar-wrap">
+            <img src="assets/images/agentes/rosto-senior.webp" alt="" width="52" height="52" decoding="async">
+          </div>
+          <div class="agent-tools-stack">
+            <!-- Badges de ferramentas acopladas: WhatsApp + CRM -->
+            <svg viewBox="0 0 24 24" fill="#25D366" title="WhatsApp"><path d="M12 2C6.48 2 2 6.48 2 12C2 13.85 2.5 15.58 3.38 17.07L2.1 21.84L6.99 20.57C8.44 21.46 10.16 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2Z"/></svg>
+            <svg viewBox="0 0 24 24" fill="#00A1E0" title="Salesforce/CRM"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4C9.11 4 6.6 5.64 5.35 8.04C2.34 8.36 0 10.91 0 14C0 17.31 2.69 20 6 20H19C21.76 20 24 17.76 24 15C24 12.36 21.95 10.22 19.35 10.04Z"/></svg>
+          </div>
+          <div class="agent-meta">
+            <span class="agent-name">Agente SDR</span>
+            <span class="status-indicator"><span class="status-dot emerald"></span> RODANDO</span>
+          </div>
+        </div>
+
+        <!-- Agente 2: Follow-up & Reativação -->
+        <div class="agent-node node-followup">
+          <div class="agent-avatar-wrap">
+            <img src="assets/images/agentes/rosto-executiva.webp" alt="" width="52" height="52" decoding="async">
+          </div>
+          <div class="agent-tools-stack">
+            <!-- WhatsApp + integrações -->
+            <svg viewBox="0 0 24 24" fill="#25D366" title="WhatsApp"><path d="M12 2C6.48 2 2 6.48 2 12C2 13.85 2.5 15.58 3.38 17.07L2.1 21.84L6.99 20.57C8.44 21.46 10.16 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2Z"/></svg>
+            <svg viewBox="0 0 24 24" fill="#FF6D5A" title="Integrações"><circle cx="12" cy="12" r="8"/></svg>
+          </div>
+          <div class="agent-meta">
+            <span class="agent-name">Agente de Follow-up</span>
+            <span class="status-indicator"><span class="status-dot cyan"></span> REATIVANDO</span>
+          </div>
+        </div>
+
+        <!-- Agente 3: Agendamento & Follow-up -->
+        <div class="agent-node node-schedule">
+          <div class="agent-avatar-wrap">
+            <img src="assets/images/agentes/rosto-analista.webp" alt="" width="52" height="52" decoding="async">
+          </div>
+          <div class="agent-tools-stack">
+            <!-- Google Calendar -->
+            <svg viewBox="0 0 24 24" fill="#EA4335" title="Google Calendar"><rect width="20" height="20" x="2" y="2" rx="4"/></svg>
+          </div>
+          <div class="agent-meta">
+            <span class="agent-name">Agente de Agenda</span>
+            <span class="status-indicator"><span class="status-dot emerald"></span> ATIVO</span>
+          </div>
+        </div>
+
+        <!-- Agente 4: Qualificador de PME -->
+        <div class="agent-node node-qualifier">
+          <div class="agent-avatar-wrap">
+            <img src="assets/images/agentes/rosto-ruivo.webp" alt="" width="52" height="52" decoding="async">
+          </div>
+          <div class="agent-tools-stack">
+            <!-- Filtro de Renda / Procedimento -->
+            <svg viewBox="0 0 24 24" fill="#10B981" title="Qualificação"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+          </div>
+          <div class="agent-meta">
+            <span class="agent-name">Triagem Especializada</span>
+            <span class="status-indicator"><span class="status-dot cyan"></span> FILTRANDO</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Conteúdo Central da Hero -->
+      <div class="container hero-content">
+        <!-- Badge Cápsula Superior estilo tess.im -->
+        <div class="hero-capsule-wrap">
+          <div class="badge-capsule">
+            <span class="badge-tag-new">NOVO</span>
+            <span>Uma equipe autônoma que opera enquanto sua clínica descansa.</span>
+          </div>
+        </div>
+
+        <!-- Headline Monumental com sublinhados finos ciano -->
+        <h1 class="hero-headline">
+          Sua empresa <span class="underline-cyan">atendendo</span>, <span class="underline-cyan">vendendo</span> e <span class="underline-cyan">organizando</span> com inteligência artificial.
+        </h1>
+
+        <!-- Descrição de Apoio com Alto Contraste -->
+        <p class="hero-subheadline" style="max-width: 640px; margin: 0 auto; font-size: 1.125rem;">
+          Resposta em segundos no WhatsApp, agenda cheia e nenhum orçamento esquecido. Tudo funcionando 24 horas por dia.
+        </p>
+
+        <!-- CTAs Principais -->
+        <div class="hero-cta-group">
+          <a href="https://wa.me/5521983701900?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20demonstra%C3%A7%C3%A3o%20das%20solu%C3%A7%C3%B5es%20de%20IA." 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="btn-pill btn-pill-cyan">
+            Solicitar Demonstração no WhatsApp
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+
+          <a href="#servicos" class="btn-pill btn-pill-secondary">
+            Ver os Serviços
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SEÇÃO 2: SERVIÇOS — ONDE A IA FAZ DIFERENÇA (#servicos)
+         ========================================================================== -->
+    <section class="section" id="servicos">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <div class="badge-capsule">
+            <span class="status-indicator"><span class="status-dot cyan"></span> NOSSOS SERVIÇOS</span>
+          </div>
+          <h2>Onde a IA faz diferença no seu negócio</h2>
+          <p>Do primeiro contato no WhatsApp ao cliente agendado e acompanhado: a IX AI coloca inteligência artificial para trabalhar em cada etapa do seu atendimento.</p>
+        </div>
+
+        <div class="services-layout" data-reveal>
+          <div class="services-tabs" role="tablist" aria-label="Serviços da IX AI">
+            <button type="button" class="service-tab" role="tab" id="aba-atendimento" aria-controls="servico-atendimento" aria-selected="true">Atendimento 24h</button>
+            <button type="button" class="service-tab" role="tab" id="aba-qualificacao" aria-controls="servico-qualificacao" aria-selected="false" tabindex="-1">Qualificação</button>
+            <button type="button" class="service-tab" role="tab" id="aba-agendamento" aria-controls="servico-agendamento" aria-selected="false" tabindex="-1">Agendamento</button>
+            <button type="button" class="service-tab" role="tab" id="aba-recuperacao" aria-controls="servico-recuperacao" aria-selected="false" tabindex="-1">Recuperação de vendas</button>
+            <button type="button" class="service-tab" role="tab" id="aba-organizacao" aria-controls="servico-organizacao" aria-selected="false" tabindex="-1">Organização</button>
+            <button type="button" class="service-tab" role="tab" id="aba-rotinas" aria-controls="servico-rotinas" aria-selected="false" tabindex="-1">Rotinas</button>
+          </div>
+
+          <div class="services-panels">
+          <article class="service-panel" role="tabpanel" id="servico-atendimento" aria-labelledby="aba-atendimento" tabindex="0">
+            <span class="service-panel-count">01 / 06</span>
+            <span class="service-panel-tagline">Nenhum cliente esperando resposta</span>
+            <h3 class="service-panel-title">Atendimento no WhatsApp</h3>
+            <p class="service-panel-desc">Sua empresa responde em segundos, a qualquer hora, com o seu jeito de falar. Tira dúvidas sobre serviços, valores e horários, e chama alguém da equipe quando a conversa pede.</p>
+            <ul class="service-points">
+                <li class="service-point">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Resposta em menos de 1 minuto, inclusive à noite e no fim de semana</span>
+                </li>
+                <li class="service-point">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Fala só o que você aprovou, sem inventar informação</span>
+                </li>
+                <li class="service-point">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Sua equipe assume a conversa a qualquer momento</span>
+                </li>
+            </ul>
+          </article>
+          <article class="service-panel" role="tabpanel" id="servico-qualificacao" aria-labelledby="aba-qualificacao" tabindex="0">
+            <span class="service-panel-count">02 / 06</span>
+            <span class="service-panel-tagline">Sua equipe só fala com quem está pronto</span>
+            <h3 class="service-panel-title">Qualificação de clientes</h3>
+            <p class="service-panel-desc">Antes de passar o contato adiante, a IA entende o que a pessoa procura, a urgência e o perfil de investimento. Quem chega para a sua equipe já chega filtrado.</p>
+            <ul class="service-points">
+                <li class="service-point">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Perguntas certas para cada tipo de serviço</span>
+                </li>
+                <li class="service-point">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Resumo do cliente entregue para quem vai atender</span>
+                </li>
+                <li class="service-point">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Curiosos e contatos frios separados dos prontos para comprar</span>
+                </li>
+            </ul>
+          </article>
+          <article class="service-panel" role="tabpanel" id="servico-agendamento" aria-labelledby="aba-agendamento" tabindex="0">
+            <span class="service-panel-count">03 / 06</span>
+            <span class="service-panel-tagline">Menos faltas, mais horários ocupados</span>
+            <h3 class="service-panel-title">Agenda cheia, sem faltas</h3>
+            <p class="service-panel-desc">A IA marca direto nos horários livres da sua equipe, confirma na véspera e lembra no dia. Se o cliente precisar remarcar, ela resolve sem ninguém parar o que está fazendo.</p>
+            <ul class="service-points">
+                <li class="service-point">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Agendamento direto na agenda da equipe, sem conflito</span>
+                </li>
+                <li class="service-point">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Confirmação e lembrete automáticos</span>
+                </li>
+                <li class="service-point">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Remarcação resolvida na própria conversa</span>
+                </li>
+            </ul>
+          </article>
+          <article class="service-panel" role="tabpanel" id="servico-recuperacao" aria-labelledby="aba-recuperacao" tabindex="0">
+            <span class="service-panel-count">04 / 06</span>
+            <span class="service-panel-tagline">Nenhum orçamento esquecido</span>
+            <h3 class="service-panel-title">Recuperação de orçamentos</h3>
+            <p class="service-panel-desc">Quem pediu orçamento e sumiu volta a ser procurado no momento certo, com uma mensagem natural. Venda que antes se perdia por falta de retorno volta para a mesa.</p>
+            <ul class="service-points">
+                <li class="service-point">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Retorno automático para quem parou de responder</span>
+                </li>
+                <li class="service-point">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Mensagens no tom da sua empresa, nada de robô</span>
+                </li>
+                <li class="service-point">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Sua equipe avisada quando o cliente responde</span>
+                </li>
+            </ul>
+          </article>
+          <article class="service-panel" role="tabpanel" id="servico-organizacao" aria-labelledby="aba-organizacao" tabindex="0">
+            <span class="service-panel-count">05 / 06</span>
+            <span class="service-panel-tagline">Zero digitação manual</span>
+            <h3 class="service-panel-title">Cadastro e histórico sempre em dia</h3>
+            <p class="service-panel-desc">Cada conversa vira cadastro, histórico e próximo passo no sistema da sua empresa. Ninguém precisa copiar dados do WhatsApp, e o gestor enxerga tudo num lugar só.</p>
+            <ul class="service-points">
+                <li class="service-point">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Cliente cadastrado sozinho a partir da conversa</span>
+                </li>
+                <li class="service-point">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Histórico completo de cada atendimento</span>
+                </li>
+                <li class="service-point">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Funciona com as ferramentas que você já usa</span>
+                </li>
+            </ul>
+          </article>
+          <article class="service-panel" role="tabpanel" id="servico-rotinas" aria-labelledby="aba-rotinas" tabindex="0">
+            <span class="service-panel-count">06 / 06</span>
+            <span class="service-panel-tagline">Horas devolvidas à sua equipe</span>
+            <h3 class="service-panel-title">Rotinas no piloto automático</h3>
+            <p class="service-panel-desc">Avisos para a equipe, relatórios, publicações nas redes sociais e aquelas tarefas que se repetem todo dia passam a rodar sozinhas, do jeito que você definiu.</p>
+            <ul class="service-points">
+                <li class="service-point">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Avisos para o responsável certo, na hora certa</span>
+                </li>
+                <li class="service-point">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Relatórios prontos sem montar planilha</span>
+                </li>
+                <li class="service-point">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Tarefas repetitivas fora da mão da equipe</span>
+                </li>
+            </ul>
+          </article>
+          </div>
+        </div>
+
+        <div class="services-cta" data-reveal>
+          <a href="https://wa.me/5521983701900?text=Ol%C3%A1%2C%20gostaria%20de%20um%20diagn%C3%B3stico%20gratuito%20para%20minha%20empresa."
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn-pill btn-pill-cyan">
+            Quero um Diagnóstico Gratuito
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SEÇÃO 3: LINHA DO TEMPO EVOLUTIVA (#evolucao)
+         ========================================================================== -->
+    <section class="section aurora-bg" id="evolucao">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <div class="badge-capsule">
+            <span class="status-indicator"><span class="status-dot cyan"></span> EVOLUÇÃO TECNOLÓGICA</span>
+          </div>
+          <h2>Como a gestão de clientes evoluiu</h2>
+          <p>Esqueça os chatbots mecânicos que irritavam seus pacientes. Veja a transição que tornou a inteligência artificial indispensável para empresas modernas.</p>
+        </div>
+
+        <div class="timeline-track-wrap" data-reveal>
+          <div class="timeline-steps">
+            <!-- 2016 -->
+            <div class="timeline-step">
+              <span class="timeline-year-badge">2016</span>
+              <h3 class="timeline-step-title">Chatbot Rígido</h3>
+              <p class="timeline-step-desc">Respostas engessadas baseadas em menus ("digite 1 para..."). O cliente se frustrava com a falta de empatia e abandonava a conversa.</p>
+            </div>
+
+            <!-- 2021 -->
+            <div class="timeline-step">
+              <span class="timeline-year-badge">2021</span>
+              <h3 class="timeline-step-title">Copilot Reativo</h3>
+              <p class="timeline-step-desc">Assistentes que sugeriam textos para atendentes humanos. Ainda dependiam de pessoas disponíveis em horário comercial para responder.</p>
+            </div>
+
+            <!-- 2024 -->
+            <div class="timeline-step">
+              <span class="timeline-year-badge">2024</span>
+              <h3 class="timeline-step-title">Agente Pontual</h3>
+              <p class="timeline-step-desc">Primeiras IAs geradoras de texto executando tarefas isoladas, porém desconectadas do CRM, da agenda e dos sistemas da empresa.</p>
+            </div>
+
+            <!-- HOJE -->
+            <div class="timeline-step active">
+              <span class="timeline-year-badge">HOJE (IX AI)</span>
+              <h3 class="timeline-step-title">Agente Integrado</h3>
+              <p class="timeline-step-desc">Autonomia contínua 24/7 com aprendizado da rotina da sua PME, triagem prévia, conexão nativa com WhatsApp e o humano sempre no controle.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SEÇÃO 4: SETORES DE MERCADO PME (#setores)
+         ========================================================================== -->
+    <section class="section" id="setores">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <div class="badge-capsule">
+            <span class="status-indicator"><span class="status-dot emerald"></span> SETORES PRIORITÁRIOS</span>
+          </div>
+          <h2>Soluções modeladas para o seu modelo de negócio</h2>
+          <p>Cada segmento possui dores e regras operacionais únicas. Nossas soluções já nascem configuradas para as especificidades da sua área.</p>
+        </div>
+
+        <div class="sectors-grid">
+          <!-- Setor 1: Clínicas de Estética -->
+          <article class="sector-card" data-reveal>
+            <div class="sector-icon-wrap" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="m4.93 4.93 4.24 4.24"></path>
+                <path d="m14.83 9.17 4.24-4.24"></path>
+                <path d="m14.83 14.83 4.24 4.24"></path>
+                <path d="m9.17 14.83-4.24 4.24"></path>
+              </svg>
+            </div>
+            <h3 class="sector-title">Clínicas de Estética & Dermatologia</h3>
+            <p class="sector-desc">Atendimento para procedimentos de alto valor agregado (harmonização, bioestimuladores, lasers) e redução drástica do <em>no-show</em> com confirmações ativas.</p>
+          </article>
+
+          <!-- Setor 2: Odontologia -->
+          <article class="sector-card" data-reveal>
+            <div class="sector-icon-wrap" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2C6.5 2 2 6.5 2 12c0 3.5 1.8 6.6 4.5 8.4V22l3.3-1.1c.7.1 1.4.1 2.2.1 5.5 0 10-4.5 10-10S17.5 2 12 2z"></path>
+              </svg>
+            </div>
+            <h3 class="sector-title">Consultórios Odontológicos</h3>
+            <p class="sector-desc">Triagem inteligente para implantes, próteses e alinhadores invisíveis, direcionando o paciente com a avaliação prévia já concluída no WhatsApp.</p>
+          </article>
+
+          <!-- Setor 3: Advocacia -->
+          <article class="sector-card" data-reveal>
+            <div class="sector-icon-wrap" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3v18"></path>
+                <path d="m4 6 8-3 8 3"></path>
+                <path d="m6 10 6-2 6 2"></path>
+                <path d="M6 10a4 4 0 0 0 0 8h0a4 4 0 0 0 0-8"></path>
+                <path d="M18 10a4 4 0 0 0 0 8h0a4 4 0 0 0 0-8"></path>
+              </svg>
+            </div>
+            <h3 class="sector-title">Escritórios de Advocacia</h3>
+            <p class="sector-desc">Atendimento ético e consultivo em rigorosa conformidade com o Código de Ética da OAB, qualificando casos antes de transferir para a equipe jurídica.</p>
+          </article>
+
+          <!-- Setor 4: Imobiliárias -->
+          <article class="sector-card" data-reveal>
+            <div class="sector-icon-wrap" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+            </div>
+            <h3 class="sector-title">Imobiliárias & Corretores</h3>
+            <p class="sector-desc">Triagem automática por renda, localização de interesse e valor de entrada com agendamento imediato de visitas presenciais para os corretores.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SEÇÃO 5: MISSION CONTROL — HUMANO NO CONTROLE (#controle)
+         ========================================================================== -->
+    <section class="section" id="controle">
+      <div class="container">
+        <div class="mission-control-panel" data-reveal>
+          <div class="cockpit-header">
+            <div class="cockpit-title-wrap">
+              <div class="badge-capsule" style="margin-bottom: 0.75rem;">
+                <span class="status-indicator"><span class="status-dot emerald"></span> GOVERNANÇA ATIVA</span>
+              </div>
+              <h3>Mission Control: O Humano Sempre no Controle</h3>
+              <p>Você nunca perde o comando. Cada resposta e cada ação da IA operam sob regras estritas definidas por você.</p>
+            </div>
+
+            <a href="https://wa.me/5521983701900?text=Ol%C3%A1%2C%20gostaria%20de%20entender%20como%20funciona%20o%20painel%20de%20controle%20e%20seguran%C3%A7a." 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn-pill btn-pill-secondary btn-pill-sm">
+              Ver Parâmetros de Segurança
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+          </div>
+
+          <div class="cockpit-grid">
+            <div class="cockpit-card">
+              <div class="cockpit-card-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+              </div>
+              <h4 class="cockpit-card-title">Histórico Completo de Cada Ação</h4>
+              <p class="cockpit-card-desc">Toda conversa, agendamento e mensagem enviada fica registrada. Você confere o que a IA fez, quando e por quê.</p>
+            </div>
+
+            <div class="cockpit-card">
+              <div class="cockpit-card-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <h4 class="cockpit-card-title">Guarda-Corpos (Guardrails) Anti-Alucinação</h4>
+              <p class="cockpit-card-desc">A IA só responde com base nas informações que você aprovou na base de conhecimento. Se surgir uma dúvida inédita, ele transfere para um humano.</p>
+            </div>
+
+            <div class="cockpit-card">
+              <div class="cockpit-card-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg>
+              </div>
+              <h4 class="cockpit-card-title">Assunção Humana Instantânea</h4>
+              <p class="cockpit-card-desc">A qualquer momento, qualquer membro da sua equipe pode assumir a conversa no WhatsApp simplesmente enviando uma mensagem. O robô silencia na hora.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SEÇÃO 6: PROVA SOCIAL REAL — CASE VIASEG CORRETORA
+         ========================================================================== -->
+    <section class="section" id="prova-social">
+      <div class="container">
+        <div class="case-study-box" data-reveal>
+          <div class="case-study-content">
+            <div>
+              <div class="badge-capsule" style="margin-bottom: 1rem;">
+                <span class="status-indicator"><span class="status-dot emerald"></span> CASE REAL EM OPERAÇÃO</span>
+              </div>
+              <h3 style="font-size: var(--text-2xl); margin-bottom: 1rem;">ViaSeg Corretora de Seguros</h3>
+              <p style="font-size: var(--text-base); color: var(--text-secondary); line-height: 1.7; margin-bottom: 2rem;">
+                Implementação de inteligência artificial que unificou o atendimento no WhatsApp com a triagem de seguros, eliminando a lentidão no retorno aos segurados.
+              </p>
+              <a href="https://wa.me/5521983701900?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20detalhes%20sobre%20o%20case%20da%20ViaSeg%20Corretora." 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="btn-pill btn-pill-secondary btn-pill-sm">
+                Conhecer Detalhes da Solução
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </a>
+            </div>
+
+            <div class="case-metrics-grid">
+              <div class="case-metric-item">
+                <span class="case-metric-escopo">IA no WhatsApp</span>
+                <span class="case-metric-label">Atendimento automatizado no número da corretora</span>
+              </div>
+              <div class="case-metric-item">
+                <span class="case-metric-escopo">CRM integrado</span>
+                <span class="case-metric-label">Conversas e cadastro em via dupla, sem digitação manual</span>
+              </div>
+              <div class="case-metric-item">
+                <span class="case-metric-escopo">Operação contínua</span>
+                <span class="case-metric-label">Atendimento ativo fora do horário comercial</span>
+              </div>
+              <div class="case-metric-item">
+                <span class="case-metric-escopo">Publicação social</span>
+                <span class="case-metric-label">Agenda de conteúdo publicada sozinha</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SEÇÃO 7: PERGUNTAS FREQUENTES (FAQ ACCORDION) (#faq)
+         ========================================================================== -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <div class="badge-capsule">
+            <span class="status-indicator"><span class="status-dot cyan"></span> DÚVIDAS FREQUENTES</span>
+          </div>
+          <h2>Perguntas frequentes sobre a tecnologia</h2>
+          <p>Tire suas dúvidas sobre como a IA funciona na sua empresa.</p>
+        </div>
+
+        <div class="faq-wrap" data-reveal>
+          <details class="faq-item">
+            <summary class="faq-summary">
+              <span>Como a IA aprende a falar como a minha empresa?</span>
+              <svg class="faq-icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </summary>
+            <div class="faq-answer">
+              Alimentamos a IA com as regras do seu negócio: catálogo de serviços, diferenciais, formas de pagamento, restrições e tom de voz. A IA é calibrada para responder exatamente dentro das diretrizes aprovadas por você, sem inventar informações.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-summary">
+              <span>Eu preciso mudar o número do WhatsApp da minha clínica ou empresa?</span>
+              <svg class="faq-icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </summary>
+            <div class="faq-answer">
+              Não. A conexão é feita no número comercial que você já usa, preservando contatos, histórico e identidade. Na implantação definimos junto com você a forma de conexão adequada ao volume de atendimento do seu negócio.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-summary">
+              <span>Funciona com as ferramentas que eu já uso?</span>
+              <svg class="faq-icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </summary>
+            <div class="faq-answer">
+              Na maioria dos casos, sim. A IX AI conecta a IA ao WhatsApp, ao Google Agenda, a planilhas e aos principais sistemas de gestão de clientes. Na implantação mapeamos o que você já usa e integramos sem trocar seu sistema.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-summary">
+              <span>O que acontece se um cliente fizer uma pergunta complexa?</span>
+              <svg class="faq-icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </summary>
+            <div class="faq-answer">
+              A IA possui parâmetros de segurança que detectam dúvidas fora do escopo pré-definido. Nesses casos, ele informa cordialmente ao cliente que está acionando o especialista responsável e notifica a sua equipe instantaneamente.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-summary">
+              <span>Qual é o prazo para colocar toda a estrutura no ar?</span>
+              <svg class="faq-icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </summary>
+            <div class="faq-answer">
+              O processo de onboarding técnico, integração das ferramentas e treinamento da base de conhecimento da IA costuma levar entre 7 e 14 dias úteis, com validações passo a passo acompanhadas pelo gestor.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SEÇÃO 8: BANNER FINAL DE CONVERSÃO (#contato)
+         ========================================================================== -->
+    <section class="section" id="contato">
+      <div class="container">
+        <div class="cta-banner-box" data-reveal>
+          <div class="badge-capsule" style="margin-bottom: 1.5rem;">
+            <span class="status-indicator"><span class="status-dot cyan"></span> CANAL OFICIAL DIRETO</span>
+          </div>
+          <h2 style="font-size: clamp(2rem, 4vw, 3.2rem); margin-bottom: 1.25rem;">
+            Pronto para nunca mais deixar um cliente sem resposta?
+          </h2>
+          <p style="max-width: 680px; margin: 0 auto 2.5rem auto; font-size: var(--text-lg); color: var(--text-secondary);">
+            Fale agora mesmo com os especialistas da IX AI pelo WhatsApp oficial (+55 21 98370-1900) e receba um diagnóstico exclusivo do atendimento e dos processos da sua empresa.
+          </p>
+
+          <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+            <a href="https://wa.me/5521983701900?text=Ol%C3%A1%2C%20gostaria%20de%20um%20diagn%C3%B3stico%20gratuito%20para%20minha%20empresa." 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn-pill btn-pill-cyan" 
+               style="font-size: var(--text-base); padding: 0.875rem 2.25rem;">
+              Iniciar Atendimento no WhatsApp
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+
+          <p style="margin-top: 1.5rem; font-family: var(--font-mono); font-size: var(--text-xs); color: var(--text-muted);">
+            ● Canal Direto: +55 (21) 98370-1900 | Atendimento em todo o território nacional
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       RODAPÉ CORPORATIVO (BENCHMARK TESS.IM & REDES SOCIAIS)
+       ========================================================================== -->
+  <footer class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Coluna 1: Marca e Posicionamento -->
+        <div class="footer-brand-col">
+          <a href="#inicio" class="brand-logo-link" aria-label="Voltar ao início">
+            <svg class="brand-monogram" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="5" y="9" width="6" height="22" rx="3" fill="#6FC3D3" />
+              <path d="M18.7 11.7L33.3 28.3" stroke="#F3F4F6" stroke-width="5.4" stroke-linecap="round" />
+              <path d="M33.3 11.7L18.7 28.3" stroke="#F3F4F6" stroke-width="5.4" stroke-linecap="round" />
+            </svg>
+            <span class="brand-text">IX <span>AI</span></span>
+          </a>
+          <p style="color: var(--text-secondary); line-height: 1.6;">
+            Agência de inteligência artificial para PMEs que não aceitam perder clientes por demora.
+          </p>
+          <div style="margin-top: 1.5rem;">
+            <span class="status-indicator"><span class="status-dot emerald"></span> OPERAÇÃO ATIVA NO BRASIL</span>
+          </div>
+        </div>
+
+        <!-- Coluna 2: Serviços -->
+        <div>
+          <h4 class="footer-col-title">SERVIÇOS</h4>
+          <div class="footer-links-list">
+            <a href="#servicos" class="footer-link">Atendimento no WhatsApp</a>
+            <a href="#servicos" class="footer-link">Qualificação de Clientes</a>
+            <a href="#servicos" class="footer-link">Agendamento</a>
+            <a href="#servicos" class="footer-link">Recuperação de Orçamentos</a>
+            <a href="#controle" class="footer-link">Mission Control</a>
+          </div>
+        </div>
+
+        <!-- Coluna 3: Setores -->
+        <div>
+          <h4 class="footer-col-title">SETORES</h4>
+          <div class="footer-links-list">
+            <a href="#setores" class="footer-link">Clínicas de Estética</a>
+            <a href="#setores" class="footer-link">Odontologia</a>
+            <a href="#setores" class="footer-link">Advocacia</a>
+            <a href="#setores" class="footer-link">Imobiliárias</a>
+          </div>
+        </div>
+
+        <!-- Coluna 4: Mídias Sociais & Contato -->
+        <div>
+          <h4 class="footer-col-title">MÍDIAS SOCIAIS</h4>
+          <div class="social-buttons-group">
+            <a href="https://www.facebook.com/ixai.agencia" target="_blank" rel="noopener noreferrer" class="social-button-pill btn-facebook" aria-label="Acessar Facebook da Agência IX AI">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+              <span>Facebook</span>
+            </a>
+
+            <a href="https://www.instagram.com/ixai.agencia" target="_blank" rel="noopener noreferrer" class="social-button-pill btn-instagram" aria-label="Acessar Instagram da Agência IX AI">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+              <span>Instagram</span>
+            </a>
+
+            <a href="https://www.linkedin.com/company/ixai" target="_blank" rel="noopener noreferrer" class="social-button-pill btn-linkedin" aria-label="Acessar LinkedIn da Agência IX AI">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+
+          <div style="margin-top: 1.25rem;">
+            <a href="https://wa.me/5521983701900" target="_blank" rel="noopener noreferrer" class="footer-link" style="color: var(--accent-cyan); font-weight: var(--weight-medium); display: block; margin-bottom: 0.25rem;">
+              WhatsApp: +55 21 98370-1900
+            </a>
+            <span class="footer-link" style="color: var(--text-muted); font-size: var(--text-xs);">Atendimento: 08h às 19h</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barra Inferior de Direitos e Redes Sociais -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Agência IX AI &middot; CNPJ 69.334.354/0001-79 &middot; Todos os direitos reservados.
+        </div>
+
+        <!-- Documentos legais e controle de cookies -->
+        <div class="footer-legal-links">
+          <a href="politica-de-privacidade.html">Política de Privacidade</a>
+          <a href="politica-de-cookies.html">Política de Cookies</a>
+          <a href="termos-de-uso.html">Termos de Uso</a>
+          <a href="#" data-abrir-consentimento>Preferências de cookies</a>
+        </div>
+
+        <!-- Redes Sociais Estruturadas (Facebook, Instagram, LinkedIn) -->
+        <div class="footer-social-links" aria-label="Redes Sociais da IX AI">
+          <a href="https://www.facebook.com/ixai.agencia" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Siga-nos no Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </a>
+
+          <a href="https://www.instagram.com/ixai.agencia" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Siga-nos no Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+
+          <a href="https://www.linkedin.com/company/ixai" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Siga-nos no LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão Flutuante de WhatsApp Oficial com Notificação Ativa -->
+  <a href="https://wa.me/5521983701900?text=Ol%C3%A1%20IX%20AI%2C%20gostaria%20de%20tirar%20d%C3%BAvidas%20sobre%20as%20solu%C3%A7%C3%B5es." 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="whatsapp-float" 
+     aria-label="Falar agora com a Agência IX AI no WhatsApp oficial">
+    <span class="whatsapp-notification-badge" aria-hidden="true"></span>
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 6.46 17.5 2 12.04 2ZM12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.82L4.44 19.64L5.27 16.61L5.07 16.29C4.24 14.97 3.8 13.46 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67C16.6 3.67 20.3 7.37 20.3 11.92C20.3 16.46 16.59 20.15 12.04 20.15ZM16.61 14.39C16.36 14.26 15.13 13.66 14.9 13.58C14.67 13.5 14.51 13.46 14.34 13.71C14.18 13.96 13.71 14.51 13.57 14.67C13.43 14.84 13.29 14.86 13.04 14.73C12.79 14.61 11.99 14.34 11.04 13.49C10.3 12.83 9.8 12.01 9.66 11.76C9.52 11.51 9.64 11.38 9.77 11.25C9.88 11.14 10.02 10.96 10.15 10.82C10.27 10.67 10.31 10.57 10.39 10.4C10.47 10.24 10.43 10.1 10.37 9.97C10.31 9.85 9.82 8.64 9.61 8.14C9.41 7.65 9.21 7.71 9.06 7.71C8.92 7.7 8.76 7.7 8.59 7.7C8.43 7.7 8.16 7.76 7.93 8.01C7.7 8.26 7.05 8.87 7.05 10.11C7.05 11.35 7.95 12.55 8.07 12.71C8.2 12.88 9.84 15.41 12.35 16.49C12.95 16.75 13.41 16.9 13.78 17.02C14.38 17.21 14.93 17.18 15.36 17.12C15.84 17.05 16.84 16.51 17.05 15.93C17.26 15.35 17.26 14.86 17.2 14.73C17.14 14.61 16.86 14.51 16.61 14.39Z"/>
+    </svg>
+  </a>
+
+  <!-- Script Modular Assíncrono -->
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/consentimento.js" defer></script>
+</body>
+</html>

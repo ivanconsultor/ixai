@@ -1,0 +1,137 @@
+/**
+ * AGÊNCIA IX AI — DESIGN TOKENS & VARIÁVEIS GLOBAIS
+ * Versão: 1.0.0
+ * Referência Visual: tess.im (Awwwards Level) / Dark Luxury Control Center
+ */
+
+:root {
+  /* ==========================================================================
+     PALETA DE CORES — TEMA ESCURO (PADRÃO: CENTRO DE COMANDO)
+     ========================================================================== */
+  --bg-primary: #0E0F11;              /* Fundo principal ultra profundo */
+  --bg-surface-1: #16181B;            /* Camada 1: Cards e painéis principais */
+  --bg-surface-2: #1E2126;            /* Camada 2: Elementos internos e hovers */
+  --bg-surface-elevated: #242830;     /* Superfícies destacadas e modais */
+  --bg-glass: rgba(14, 15, 17, 0.82); /* Vidro translúcido para header fixo */
+  --bg-glass-card: rgba(22, 24, 27, 0.65); /* Fundo translúcido para cards com backdrop */
+
+  /* Linhas e Contornos Técnicos */
+  --border-subtle: #2A2E33;           /* Borda padrão de precisão de 1px */
+  --border-focus: #3D434B;            /* Borda em estado de foco ou destaque */
+  --border-glow: rgba(111, 195, 211, 0.45); /* Borda com brilho ciano */
+
+  /* Acentos de Tecnologia & IA */
+  --accent-cyan: #6FC3D3;             /* Ciano-água vibrante (IA, Agentes, Destaques) */
+  --accent-cyan-hover: #88D3E2;       /* Variação mais clara para interações */
+  --accent-cyan-subtle: rgba(111, 195, 211, 0.12); /* Fundo suave para badges ciano */
+  --accent-cyan-glow: rgba(111, 195, 211, 0.32);   /* Sombra de projeção luminosa */
+  
+  /* Status Operacionais & Conversão */
+  --accent-emerald: #10B981;          /* Verde status: ONLINE, RODANDO, CONVERTIDO */
+  --accent-emerald-subtle: rgba(16, 185, 129, 0.14);
+  --accent-emerald-glow: rgba(16, 185, 129, 0.35);
+  --accent-amber: #F59E0B;            /* Âmbar status: PENDENTE, ATENÇÃO, AGENDANDO */
+  --accent-amber-subtle: rgba(245, 158, 11, 0.14);
+  --accent-rose: #F43F5E;             /* Alerta de no-show / perda de lead */
+
+  /* Tipografia & Hierarquia de Contraste */
+  --text-primary: #F3F4F6;            /* Branco puro de alto contraste */
+  --text-secondary: #9CA3AF;          /* Cinza médio para textos corridos e subtítulos */
+  --text-muted: #6B7280;              /* Cinza para metadados, labels secundários */
+  --text-dimmed: #4B5563;             /* Termos de apoio atenuados na hero */
+
+  /* ==========================================================================
+     TIPOGRAFIA
+     ========================================================================== */
+  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --text-xs: 0.75rem;     /* 12px */
+  --text-sm: 0.875rem;    /* 14px */
+  --text-base: 1rem;      /* 16px */
+  --text-lg: 1.125rem;    /* 18px */
+  --text-xl: 1.25rem;     /* 20px */
+  --text-2xl: 1.5rem;     /* 24px */
+  --text-3xl: 1.875rem;   /* 30px */
+  --text-4xl: 2.25rem;    /* 36px */
+  --text-5xl: 3rem;       /* 48px */
+  --text-6xl: 3.75rem;    /* 60px */
+  --text-7xl: 4.5rem;     /* 72px */
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* ==========================================================================
+     GEOMETRIA & FORMAS
+     ========================================================================== */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;               /* Padrão pílula do tess.im para botões e tags */
+
+  /* ==========================================================================
+     SOMBRAS, BRILHOS & PROFUNDIDADE
+     ========================================================================== */
+  --shadow-card: 0 16px 40px -12px rgba(0, 0, 0, 0.65);
+  --shadow-card-hover: 0 20px 48px -10px rgba(0, 0, 0, 0.85);
+  --shadow-glow-cyan: 0 0 35px rgba(111, 195, 211, 0.22);
+  --shadow-glow-emerald: 0 0 20px rgba(16, 185, 129, 0.35);
+
+  /* Efeito Aurora Boreal (CSS Puro sem imagens pesadas) */
+  --aurora-gradient: radial-gradient(ellipse 70% 55% at 50% -10%, rgba(111, 195, 211, 0.18), transparent 75%);
+  --aurora-gradient-secondary: radial-gradient(ellipse 60% 45% at 85% 20%, rgba(16, 185, 129, 0.12), transparent 70%);
+
+  /* ==========================================================================
+     TRANSIÇÕES E ANIMAÇÕES
+     ========================================================================== */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ==========================================================================
+     CONTAINER & ESPAÇAMENTOS
+     ========================================================================== */
+  --container-max-width: 1240px;
+  --section-padding-y: 6.5rem;
+  --section-padding-x: 1.5rem;
+}
+
+/* ==========================================================================
+   TEMA CLARO (ATIVADO DINAMICAMENTE VIA SELETOR OU DATA-THEME)
+   ========================================================================== */
+[data-theme="light"] {
+  --bg-primary: #F8F9FA;
+  --bg-surface-1: #FFFFFF;
+  --bg-surface-2: #F1F3F5;
+  --bg-surface-elevated: #E9ECEF;
+  --bg-glass: rgba(248, 249, 250, 0.88);
+  --bg-glass-card: rgba(255, 255, 255, 0.75);
+
+  --border-subtle: #E2E6EA;
+  --border-focus: #CED4DA;
+  --border-glow: rgba(31, 127, 145, 0.35);
+
+  --accent-cyan: #1F7F91;
+  --accent-cyan-hover: #166473;
+  --accent-cyan-subtle: rgba(31, 127, 145, 0.08);
+  --accent-cyan-glow: rgba(31, 127, 145, 0.18);
+
+  --accent-emerald: #059669;
+  --accent-emerald-subtle: rgba(5, 150, 105, 0.1);
+  --accent-emerald-glow: rgba(5, 150, 105, 0.2);
+
+  --text-primary: #111827;
+  --text-secondary: #4B5563;
+  --text-muted: #6B7280;
+  --text-dimmed: #9CA3AF;
+
+  --shadow-card: 0 12px 32px -8px rgba(0, 0, 0, 0.08);
+  --shadow-card-hover: 0 16px 40px -6px rgba(0, 0, 0, 0.12);
+  --shadow-glow-cyan: 0 0 25px rgba(31, 127, 145, 0.15);
+
+  --aurora-gradient: radial-gradient(ellipse 70% 55% at 50% -10%, rgba(31, 127, 145, 0.1), transparent 75%);
+  --aurora-gradient-secondary: radial-gradient(ellipse 60% 45% at 85% 20%, rgba(5, 150, 105, 0.08), transparent 70%);
+}

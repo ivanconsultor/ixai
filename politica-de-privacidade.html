@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidade — Agência IX AI</title>
+  <meta name="description" content="Como a Agência IX AI trata dados pessoais: o que é coletado, por quê, com quem é compartilhado e como exercer seus direitos previstos na LGPD.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ixai.com.br/politica-de-privacidade.html">
+  <meta name="theme-color" content="#0E0F11">
+
+  <!-- Open Graph / Redes Sociais -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://ixai.com.br/politica-de-privacidade.html">
+  <meta property="og:title" content="Política de Privacidade — Agência IX AI">
+  <meta property="og:description" content="Como a Agência IX AI trata dados pessoais: o que é coletado, por quê, com quem é compartilhado e como exercer seus direitos previstos na LGPD.">
+  <meta property="og:image" content="https://ixai.com.br/assets/images/og-cover.png">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Agência IX AI">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Política de Privacidade — Agência IX AI">
+  <meta name="twitter:description" content="Como a Agência IX AI trata dados pessoais: o que é coletado, por quê, com quem é compartilhado e como exercer seus direitos previstos na LGPD.">
+  <meta name="twitter:image" content="https://ixai.com.br/assets/images/og-cover.png">
+
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;600&display=swap">
+
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/legal.css">
+
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- Consent Mode v2: nega por padrão antes de qualquer tag carregar -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    (function () {
+      var decisao = null;
+      try { decisao = JSON.parse(localStorage.getItem('ixai-consentimento') || 'null'); } catch (e) {}
+      var estado = (decisao && decisao.estado === 'aceito') ? 'granted' : 'denied';
+      gtag('consent', 'default', {
+        ad_storage: estado,
+        ad_user_data: estado,
+        ad_personalization: estado,
+        analytics_storage: estado,
+        functionality_storage: 'granted',
+        security_storage: 'granted'
+      });
+    })();
+  </script>
+</head>
+<body>
+
+  <header class="header-fixed" id="main-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo-link" aria-label="Página inicial da Agência IX AI">
+        <svg class="brand-monogram" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="5" y="9" width="6" height="22" rx="3" fill="#6FC3D3" />
+          <path d="M18.7 11.7L33.3 28.3" stroke="#F3F4F6" stroke-width="5.4" stroke-linecap="round" />
+          <path d="M33.3 11.7L18.7 28.3" stroke="#F3F4F6" stroke-width="5.4" stroke-linecap="round" />
+        </svg>
+        <span class="brand-text">IX <span>AI</span></span>
+      </a>
+
+      <div class="header-actions">
+        <button type="button" class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Alternar tema claro/escuro">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <a href="index.html" class="btn-pill btn-pill-secondary btn-pill-sm btn-voltar">
+          Voltar ao site
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="legal-main">
+    <div class="container">
+      <div class="legal-intro">
+        <div class="badge-capsule">
+          <span class="status-indicator"><span class="status-dot cyan"></span> DOCUMENTO LEGAL</span>
+        </div>
+        <h1>Política de Privacidade</h1>
+        <p class="legal-meta">Vigente desde 15 de outubro de 2026 &middot; Versão 1.0</p>
+      </div>
+
+      <div class="legal-content">
+
+        <div class="legal-aviso">
+          <p><strong>Antes de publicar:</strong> este documento deve ser revisado por profissional jurídico.</p>
+        </div>
+
+        <section>
+          <h2>1. Quem trata os seus dados</h2>
+          <p>Esta política descreve como a Agência IX AI trata dados pessoais em seu site e nos canais de atendimento, em conformidade com a Lei nº 13.709/2018 (Lei Geral de Proteção de Dados Pessoais — LGPD).</p>
+          <ul>
+            <li><strong>Razão social:</strong> IX AI Automation</li>
+            <li><strong>Nome fantasia:</strong> Agência IX AI</li>
+            <li><strong>CNPJ:</strong> 69.334.354/0001-79</li>
+            <li><strong>Atendimento:</strong> operação exclusivamente online, em todo o território nacional. O endereço de registro pode ser solicitado pelo e-mail de contato.</li>
+            <li><strong>Contato para assuntos de privacidade:</strong> <a href="mailto:contato@ixai.com.br">contato@ixai.com.br</a></li>
+            <li><strong>WhatsApp oficial:</strong> +55 21 98370-1900</li>
+          </ul>
+          <p>Todo pedido relacionado a dados pessoais deve ser enviado ao e-mail acima, que é o canal oficial de atendimento ao titular.</p>
+        </section>
+
+        <section>
+          <h2>2. Quais dados são tratados</h2>
+
+          <h3>2.1 Navegação neste site</h3>
+          <p>O site é institucional e não possui formulário de cadastro. Enquanto você não autorizar, nenhum cookie de medição ou publicidade é gravado. O navegador armazena localmente apenas a sua preferência de tema e a sua decisão sobre cookies — informações que não identificam ninguém e nunca são enviadas aos nossos servidores. O detalhamento está na <a href="politica-de-cookies.html">Política de Cookies</a>.</p>
+          <p>As fontes tipográficas são carregadas dos servidores do Google. Nesse carregamento, o endereço IP do visitante e dados técnicos do navegador ficam acessíveis ao Google, conforme a política de privacidade da empresa.</p>
+          <p>O provedor de hospedagem registra, por segurança, logs de acesso contendo endereço IP, data, hora e páginas solicitadas, conforme exige o Marco Civil da Internet.</p>
+
+          <h3>2.2 Contato pelo WhatsApp</h3>
+          <p>Quando você inicia uma conversa no nosso WhatsApp, tratamos os dados que você mesmo fornece:</p>
+          <ul>
+            <li>Nome e número de telefone exibidos pelo aplicativo;</li>
+            <li>Conteúdo das mensagens trocadas, inclusive áudios, imagens e arquivos que você enviar;</li>
+            <li>Informações sobre o seu negócio que você decida compartilhar durante o atendimento.</li>
+          </ul>
+          <p>O primeiro atendimento pode ser conduzido por agente automatizado com inteligência artificial. A qualquer momento você pode pedir para falar com uma pessoa da equipe.</p>
+
+          <h3>2.3 Dados de clientes contratantes</h3>
+          <p>Na execução dos serviços contratados, acessamos contas de anúncio, perfis sociais, sistemas de atendimento e bases do cliente. Nessa hipótese, a IX AI atua como <strong>operadora</strong>, e o cliente permanece como controlador dos dados dos seus próprios clientes e pacientes. O tratamento segue as instruções registradas em contrato.</p>
+        </section>
+
+        <section>
+          <h2>3. Para que os dados são usados e com qual base legal</h2>
+          <div class="legal-table-wrap">
+            <table class="legal-table">
+              <thead>
+                <tr><th>Finalidade</th><th>Dados</th><th>Base legal (art. 7º da LGPD)</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Responder contatos e elaborar propostas comerciais</td><td>Nome, telefone, conteúdo da conversa</td><td>Procedimentos preliminares de contrato (inciso V)</td></tr>
+                <tr><td>Executar os serviços contratados</td><td>Dados do contrato e dos acessos operacionais</td><td>Execução de contrato (inciso V)</td></tr>
+                <tr><td>Segurança e registro de acesso ao site</td><td>Logs do servidor</td><td>Cumprimento de obrigação legal (inciso II)</td></tr>
+                <tr><td>Medir audiência e desempenho de campanhas</td><td>Identificadores de cookie e eventos de navegação</td><td>Consentimento (inciso I)</td></tr>
+                <tr><td>Obrigações fiscais e contábeis</td><td>Dados de faturamento</td><td>Cumprimento de obrigação legal (inciso II)</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Não vendemos dados pessoais, não cedemos listas de contato e não usamos dados de atendimento para treinar modelos de inteligência artificial de terceiros.</p>
+        </section>
+
+        <section>
+          <h2>4. Com quem os dados são compartilhados</h2>
+          <ul>
+            <li><strong>Meta Platforms</strong> — provedora do WhatsApp, por onde ocorre o atendimento;</li>
+            <li><strong>Google</strong> — fornecimento das fontes do site e, quando contratado pelo cliente, ferramentas de agenda e produtividade;</li>
+            <li><strong>Provedor de hospedagem</strong> — servidor onde o site está publicado;</li>
+            <li><strong>Ferramentas de automação e atendimento</strong> utilizadas na operação, sempre sob contrato e instrução da IX AI;</li>
+            <li><strong>Autoridades públicas</strong>, quando houver ordem legal ou judicial.</li>
+          </ul>
+          <p>Parte desses fornecedores mantém servidores fora do Brasil, o que caracteriza transferência internacional de dados. Nesses casos exigimos que o tratamento ocorra com nível de proteção compatível com a LGPD.</p>
+        </section>
+
+        <section>
+          <h2>5. Por quanto tempo guardamos</h2>
+          <ul>
+            <li>Conversas comerciais sem contratação: até 12 meses após o último contato;</li>
+            <li>Dados de clientes ativos: durante toda a vigência do contrato;</li>
+            <li>Dados contratuais e fiscais: pelos prazos exigidos pela legislação, contados do encerramento;</li>
+            <li>Logs de acesso ao site: no mínimo 6 meses, conforme o Marco Civil da Internet.</li>
+          </ul>
+          <p>Encerrados os prazos, os dados são eliminados ou anonimizados.</p>
+        </section>
+
+        <section>
+          <h2>6. Segurança</h2>
+          <p>Adotamos medidas técnicas e administrativas para proteger os dados, entre elas conexão criptografada no site, controle de acesso por credencial individual às ferramentas operacionais, registro de atividade e limitação do acesso às pessoas que precisam dele para executar o trabalho.</p>
+          <p>Nenhum sistema é infalível. Em caso de incidente de segurança com risco relevante aos titulares, comunicaremos os afetados e a Autoridade Nacional de Proteção de Dados nos prazos legais.</p>
+        </section>
+
+        <section>
+          <h2>7. Seus direitos</h2>
+          <p>O artigo 18 da LGPD garante a você, a qualquer momento e gratuitamente:</p>
+          <ul>
+            <li>Confirmar se tratamos dados seus e acessá-los;</li>
+            <li>Corrigir dados incompletos, inexatos ou desatualizados;</li>
+            <li>Solicitar anonimização, bloqueio ou eliminação de dados desnecessários ou tratados em desconformidade com a lei;</li>
+            <li>Solicitar a portabilidade a outro fornecedor;</li>
+            <li>Obter informação sobre com quem compartilhamos os seus dados;</li>
+            <li>Revogar consentimento, quando o tratamento estiver baseado nele;</li>
+            <li>Opor-se a tratamento feito com fundamento em legítimo interesse.</li>
+          </ul>
+          <p>Para exercer qualquer um deles, escreva para <a href="mailto:contato@ixai.com.br">contato@ixai.com.br</a>. Responderemos no menor prazo possível e, no máximo, em 15 dias. Podemos solicitar informações que confirmem a sua identidade antes de atender ao pedido.</p>
+        </section>
+
+        <section>
+          <h2>8. Alterações desta política</h2>
+          <p>Esta política pode ser atualizada para refletir mudanças nos serviços, nas ferramentas utilizadas ou na legislação. A data de vigência no topo da página indica sempre a versão em vigor. Alterações relevantes serão comunicadas pelos nossos canais oficiais.</p>
+        </section>
+
+      </div>
+
+      <nav class="legal-nav" aria-label="Outros documentos legais">
+        <a href="politica-de-cookies.html" class="btn-pill btn-pill-secondary btn-pill-sm">Política de Cookies</a>
+        <a href="termos-de-uso.html" class="btn-pill btn-pill-secondary btn-pill-sm">Termos de Uso</a>
+        <a href="index.html" class="btn-pill btn-pill-secondary btn-pill-sm">Voltar ao site</a>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="legal-footer">
+    <div class="container legal-footer-inner">
+      <div>&copy; 2026 Agência IX AI &middot; CNPJ 69.334.354/0001-79 &middot; Todos os direitos reservados.</div>
+      <div class="footer-legal-links">
+        <a href="mailto:contato@ixai.com.br">contato@ixai.com.br</a>
+        <a href="#" data-abrir-consentimento>Preferências de cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/consentimento.js" defer></script>
+</body>
+</html>
