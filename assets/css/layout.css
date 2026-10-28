@@ -787,3 +787,37 @@
   border-color: var(--accent-cyan);
   transform: translateY(-2px);
 }
+
+/* ==========================================================================
+   ALVOS DE TOQUE
+   --------------------------------------------------------------------------
+   Em tela de toque todo controle chega a 48px, que é o mínimo que o Google
+   cobra no PageSpeed. Vale só para dedo: com mouse ou trackpad o ponteiro é
+   preciso e o desenho original fica como está.
+   ========================================================================== */
+@media (pointer: coarse) {
+
+  .theme-toggle-btn,
+  .nav-toggle {
+    width: 48px;
+    height: 48px;
+  }
+
+  .btn-pill-sm {
+    min-height: 48px;
+  }
+
+  .mobile-nav-link {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-link,
+  .footer-legal-links a,
+  .footer-bottom a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 48px;
+  }
+}

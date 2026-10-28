@@ -35,16 +35,22 @@
   # Nenhuma API sensível do navegador é usada por este site
   Header always set Permissions-Policy "geolocation=(), camera=(), microphone=(), payment=(), usb=()"
 
-  # HSTS: só depois que o HTTPS estiver estável no domínio (2 anos, com subdomínios)
-  Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains" env=HTTPS
+  # HSTS curto de propósito: 5 minutos.
+  # Com 2 anos, se o certificado falhar depois da primeira visita o navegador
+  # recusa o site por 2 anos e não há como desfazer do lado do servidor.
+  # Depois de uma semana de HTTPS estável, trocar por:
+  #   max-age=63072000; includeSubDomains
+  Header always set Strict-Transport-Security "max-age=300" env=HTTPS
 
   # Content Security Policy.
   # 'unsafe-inline' em script-src é necessário: o Consent Mode v2, o marcador .js
   # e o JSON-LD são blocos inline no <head>. Em style-src idem, por causa dos
   # 16 atributos style="" do HTML.
+  # As fontes passaram a ser servidas por este domínio, então nenhuma origem
+  # do Google aparece mais aqui.
   # AO LIGAR O GTM, acrescentar em script-src e connect-src:
   #   https://www.googletagmanager.com https://www.google-analytics.com
-  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests"
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests"
 </IfModule>
 
 # --------------------------------------------------------------------------
@@ -68,10 +74,11 @@
   ExpiresByType image/png                "access plus 1 year"
   ExpiresByType image/svg+xml            "access plus 1 year"
   ExpiresByType image/x-icon             "access plus 1 year"
+  ExpiresByType font/woff2               "access plus 1 year"
 </IfModule>
 
 <IfModule mod_headers.c>
-  <FilesMatch "\.(css|js|webp|png|svg|ico)$">
+  <FilesMatch "\.(css|js|webp|png|jpg|svg|ico|woff2)$">
     Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
   <FilesMatch "\.html$">
@@ -89,4 +96,16 @@ AddDefaultCharset UTF-8
   <FilesMatch "^\.">
     Require all denied
   </FilesMatch>
+</IfModule>
+
+# --------------------------------------------------------------------------
+# 6. Página de erro própria
+# --------------------------------------------------------------------------
+ErrorDocument 404 /404.html
+
+# --------------------------------------------------------------------------
+# 7. Tipo das fontes (caso o servidor não conheça)
+# --------------------------------------------------------------------------
+<IfModule mod_mime.c>
+  AddType font/woff2 .woff2
 </IfModule>
