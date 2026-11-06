@@ -1,12 +1,12 @@
 # RETOMAR — site da IX AI
 
-Atualizado em 28/10/2026.
+Atualizado em 06/11/2026.
 
 ## Onde o trabalho parou
 
 O site está pronto e medido. O código está versionado aqui mesmo (`C01 site`,
 branch `main`), e o pacote para subir está montado em
-`CA15 IX AI\site-ixai.zip` — 28 arquivos, 264 KB, tudo na raiz do zip.
+`CA15 IX AI\site-ixai.zip` — 28 arquivos, 258 KB, tudo na raiz do zip.
 
 O que impede ir ao ar não é código: é que `ixai.com.br` ainda não existe no DNS,
 e o site inteiro aponta para esse endereço.
@@ -22,13 +22,16 @@ Ele avisa quando cada item estiver pronto. Nada aqui depende de mim.
 | 3 | **E-mail `contato@ixai.com.br`** criado na Hostinger | O endereço está escrito no rodapé, nas 3 páginas legais e na 404 |
 | 4 | **Perfis de mídia social** criados | O schema e os botões declaram os 3 endereços da tabela abaixo |
 
-Perfis declarados no site (se algum sair com outro nome, me avisar para eu trocar):
+Perfis declarados no site (endereços definidos pelo Ivan em 06/11/2026):
 
 | Rede | Endereço no site |
 |------|------------------|
-| Facebook | `facebook.com/ixai.automation` |
-| Instagram | `instagram.com/ixai.automation` |
-| LinkedIn | `linkedin.com/company/ixai-automation` |
+| Facebook | `facebook.com/ixai` |
+| Instagram | `instagram.com/ixai` |
+| LinkedIn | `linkedin.com/company/ixai` |
+
+A ordem é sempre Facebook, Instagram, LinkedIn, nos três lugares do `index.html`:
+schema `sameAs`, botões pílula da coluna 4 do rodapé e barra de ícones inferior.
 
 ## O que eu faço quando cada coisa chegar
 
