@@ -56,6 +56,36 @@ schema `sameAs`, botões pílula da coluna 4 do rodapé e barra de ícones infer
 - **4ª foto de avatar** (Agente SDR, homem de 32 anos, barba curta). As outras 3
   já estão aplicadas.
 
+## Conferência antes da subida (06/11/2026)
+
+Medida no navegador, com o site rodando em servidor local, não só lida no código.
+
+| Frente | Resultado |
+|--------|-----------|
+| Arquivos | Os 28 caminhos de css, js, fonte e imagem respondem 200; nada quebrado |
+| Console | Zero erro nas 5 páginas |
+| Rede | Zero pedido externo; 228 KB e 13 arquivos na home |
+| Celular 375px e tablet 768px | Sem estouro lateral; a faixa de abas de serviços rola na horizontal |
+| Schema | JSON-LD válido: Organization, ProfessionalService, Service e FAQPage |
+| Sitemap e robots | Válidos e batendo com as páginas do disco; a 404 fora do sitemap |
+| Código | Sem `console.log`, `TODO` ou `onclick` inline; sem id duplicado; sem âncora quebrada |
+| Acessibilidade | `lang="pt-BR"`, um h1, nenhuma imagem sem alt, nenhum link ou botão sem nome |
+| Links externos | Todos com `rel="noopener noreferrer"` |
+| Redes sociais | Os 3 perfis abriram de verdade |
+
+Dois achados corrigidos no commit `306d787`: os títulos de coluna do rodapé passaram de
+`h4` para `h3` (pulo de nível depois de um `h2`) e os ícones sociais da faixa inferior
+foram de 36px para 44px, o mínimo de toque no celular.
+
+**Não há lazy-load a fazer:** as únicas imagens são os 4 avatares de 52px do topo, 11 KB
+somados, todos na primeira tela. `loading="lazy"` neles atrasaria a maior pintura.
+
+**Sobra na pasta:** `assets/images/og-cover.png` (161 KB) não é usado por nenhuma página —
+a capa que vale é a `.jpg` de 65 KB. Não entra no zip. Apagar é decisão do Ivan.
+
+Só dá para medir depois de no ar: PageSpeed real, Teste de Resultados Aprimorados e os
+cabeçalhos do `.htaccess`, que dependem do Apache da Hostinger.
+
 ## Como subir o zip, quando chegar a hora
 
 1. Extrair **pelo gerenciador de arquivos da Hostinger**, não no PC — o `.htaccess`
