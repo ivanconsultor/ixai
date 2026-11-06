@@ -22,12 +22,12 @@ Ele avisa quando cada item estiver pronto. Nada aqui depende de mim.
 | 3 | **E-mail `contato@ixai.com.br`** criado na Hostinger | O endereço está escrito no rodapé, nas 3 páginas legais e na 404 |
 | 4 | **Perfis de mídia social** criados | O schema e os botões declaram os 3 endereços da tabela abaixo |
 
-Perfis declarados no site (endereços definidos pelo Ivan em 06/11/2026; o Facebook não aceitou `ixai` e ficou `ixai.br`):
+Perfis declarados no site (endereços definidos pelo Ivan em 06/11/2026; Facebook e Instagram ficaram `ixai.br`; o LinkedIn de empresa não aceita ponto, por isso é `ixai`):
 
 | Rede | Endereço no site |
 |------|------------------|
 | Facebook | `facebook.com/ixai.br` |
-| Instagram | `instagram.com/ixai` |
+| Instagram | `instagram.com/ixai.br` |
 | LinkedIn | `linkedin.com/company/ixai` |
 
 A ordem é sempre Facebook, Instagram, LinkedIn, nos três lugares do `index.html`:
