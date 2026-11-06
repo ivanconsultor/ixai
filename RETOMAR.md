@@ -30,6 +30,11 @@ Perfis declarados no site (endereços definidos pelo Ivan em 06/11/2026; Faceboo
 | Instagram | `instagram.com/ixai.br` |
 | LinkedIn | `linkedin.com/company/ixai` |
 
+**As artes e os textos desses perfis ficaram prontos em 06/11/2026**, em
+`CA15 IX AI\C05 midias sociais` — uma pasta por rede, com as imagens e um `.md` com as
+frases de apresentação. O estado dessa frente está no `RETOMAR.md` de lá. O que falta é o
+Ivan subir cada peça no perfil, à mão.
+
 A ordem é sempre Facebook, Instagram, LinkedIn, nos três lugares do `index.html`:
 schema `sameAs`, botões pílula da coluna 4 do rodapé e barra de ícones inferior.
 
