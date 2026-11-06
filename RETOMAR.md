@@ -45,9 +45,11 @@ schema `sameAs`, botões pílula da coluna 4 do rodapé e barra de ícones infer
 
 ## Também pendente, independente do domínio
 
-- **GitHub.** O repositório existe só aqui no PC. O `gh` não está instalado nesta
-  máquina. Ou o Ivan instala o `gh` e eu crio o repositório privado e empurro, ou
-  ele cria o repositório vazio e me passa o endereço.
+- **GitHub: resolvido em 06/11/2026.** O repositório é
+  `https://github.com/ivanconsultor/ixai` (Public por ora; o Ivan vai fechar tudo como
+  Private depois, por serem arquivos pessoais de trabalho). O remoto `origin` já está
+  ligado em `C01 site` e os 11 commits foram enviados para `main`. O `gh` continua não
+  instalado, mas não faz falta: o Credential Manager do Git já autentica o envio.
 - **GTM.** Quando entrar, a CSP do `.htaccess` precisa mudar **na mesma publicação**:
   acrescentar `https://www.googletagmanager.com` e `https://www.google-analytics.com`
   em `script-src` e `connect-src`. Se o container subir antes, o navegador bloqueia
